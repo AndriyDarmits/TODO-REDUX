@@ -25,9 +25,13 @@ class Form extends Component {
   }
 
   submitEdit() {
-    this.props.changeEditItem(this.props.itemToEdit);
-    this.props.setEdit();
-    this.props.setItemToEdit("");
+    if (this.props.itemToEdit.label !== "") {
+      this.props.changeEditItem(this.props.itemToEdit);
+      this.props.setEdit();
+      this.props.setItemToEdit("");
+    } else {
+      alert("The input field is empty");
+    }
   }
 
   clearAllItems() {
