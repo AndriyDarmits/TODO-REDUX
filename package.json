@@ -1,6 +1,6 @@
 {
   "homepage": "http://AndriyDarmits.github.io/TODO-REDUX",
-  "name": "temp",
+  "name": "todo-redux",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
