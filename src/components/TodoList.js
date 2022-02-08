@@ -32,19 +32,25 @@ class TodoList extends Component {
       <div className="list__field">
         {this.props.items.map((item, index) => (
           <li key={index}>
-            <input
-              type="checkbox"
-              onChange={() => this.trackCheckedState(item)}
-              checked={item.checked ? true : ""}
-            />
-            <span onClick={() => this.deleteItem(item.id)}>&#x1F5D9;</span>
-            <span
-              style={{
-                textDecoration: item.checked ? "line-through" : "none",
-              }}
-            >
-              {item.label}
-            </span>
+            <div>
+              <input
+                className="custom-checkbox"
+                type="checkbox"
+                onChange={() => this.trackCheckedState(item)}
+                checked={item.checked ? true : ""}
+              />
+              <span className="delete" onClick={() => this.deleteItem(item.id)}>
+                &#x1F5D9;
+              </span>
+              <span
+                className="label"
+                style={{
+                  textDecoration: item.checked ? "line-through" : "none",
+                }}
+              >
+                {item.label}
+              </span>
+            </div>
             <button onClick={() => this.setEdit(item)}>Edit</button>
           </li>
         ))}

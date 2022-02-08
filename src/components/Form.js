@@ -58,6 +58,7 @@ class Form extends Component {
             type="text"
             className="input"
             name="input"
+            placeholder="Type something to do..."
             value={
               this.props.isEdited
                 ? this.props.itemToEdit.label
