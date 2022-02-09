@@ -27,6 +27,7 @@ export const itemsReducer = (state = [], action) => {
         return todo;
       });
       return setDoneAllItems;
+
     case actionTypes.CHANGE_EDIT_ITEM:
       const temp = [...state];
       const chengeEditItem = temp.map((item) => {
@@ -36,6 +37,7 @@ export const itemsReducer = (state = [], action) => {
         return item;
       });
       return chengeEditItem;
+
     default:
       return state;
   }
